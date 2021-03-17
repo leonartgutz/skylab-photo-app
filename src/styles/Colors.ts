@@ -1,0 +1,1 @@
+export const TextColor = '#5c5c5c'
