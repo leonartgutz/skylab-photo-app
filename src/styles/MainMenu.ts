@@ -1,7 +1,5 @@
 import styled from 'styled-components/native'
 
-const MainMenuStyle = styled.View`
+export const MainMenuWrap = styled.View`
   margin-top:50px;
 `
-
-export default MainMenuStyle

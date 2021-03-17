@@ -1,17 +1,17 @@
 import React from 'react'
 import { Text } from 'react-native'
 import { Link } from 'react-router-native'
-import MainMenuStyle from '../styles/MainMenuStyle'
+import { MainMenuWrap } from '../styles/MainMenu'
 
 const MainMenu: React.FC = () => (
-  <MainMenuStyle>
+  <MainMenuWrap>
     <Link to="/">
       <Text>Home</Text>
     </Link>
     <Link to="/album">
       <Text>Album</Text>
     </Link>
-  </MainMenuStyle>
+  </MainMenuWrap>
 )
 
 export default MainMenu
