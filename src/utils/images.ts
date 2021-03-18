@@ -1,0 +1,1 @@
+export const PhotoExample = require('../../assets/photo-example.png')

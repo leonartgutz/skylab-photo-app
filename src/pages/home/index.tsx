@@ -3,7 +3,7 @@ import * as ImagePicker from 'expo-image-picker'
 import { Platform, StyleSheet } from 'react-native'
 import { InfoMessage, PageTitleText, HomeBody, PhotoExampleImage, PhotoExampleWrap, SelectPhotoBtn, SelectPhotoBtnText, AgreementText } from './homeStyles'
 import CustomStatusBar from '../../components/customStatusBar'
-const PhotoExample = require('../../../assets/photo-example.png')
+import { PhotoExample } from '../../utils/images'
 
 interface Props {
   history: any
