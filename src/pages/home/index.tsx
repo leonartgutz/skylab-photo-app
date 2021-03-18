@@ -2,6 +2,7 @@ import React from 'react'
 import * as ImagePicker from 'expo-image-picker'
 import { Platform, StyleSheet } from 'react-native'
 import { InfoMessage, PageTitleText, HomeBody, PhotoExampleImage, PhotoExampleWrap, SelectPhotoBtn, SelectPhotoBtnText, AgreementText } from './homeStyles'
+import CustomStatusBar from '../../components/customStatusBar'
 const PhotoExample = require('../../../assets/photo-example.png')
 
 interface Props {
@@ -39,22 +40,25 @@ const Home: React.FC<Props> = ({ history }) => {
     }
   };
 
-  return <HomeBody>
-      <PageTitleText>Professional retouching.</PageTitleText>
-      <PageTitleText>Powered by A.I.</PageTitleText>
-      
-      <PhotoExampleWrap style={boxShadow.properties}>
-        <PhotoExampleImage source={PhotoExample} />
-      </PhotoExampleWrap>
+  return <>
+  <CustomStatusBar alt={false} />
+  <HomeBody>
+    <PageTitleText>Professional retouching.</PageTitleText>
+    <PageTitleText>Powered by A.I.</PageTitleText>
+    
+    <PhotoExampleWrap style={boxShadow.properties}>
+      <PhotoExampleImage source={PhotoExample} />
+    </PhotoExampleWrap>
 
-      <InfoMessage>Select a photo to start</InfoMessage>
+    <InfoMessage>Select a photo to start</InfoMessage>
 
-      <SelectPhotoBtn onPress={checkPermission} style={boxShadow.properties}>
-        <SelectPhotoBtnText>Select Photo</SelectPhotoBtnText>
-      </SelectPhotoBtn>
+    <SelectPhotoBtn onPress={checkPermission} style={boxShadow.properties}>
+      <SelectPhotoBtnText>Select Photo</SelectPhotoBtnText>
+    </SelectPhotoBtn>
 
-      <AgreementText>by selecting a photo you agree to our Terms of Service and Privacy Policy</AgreementText>
-    </HomeBody>
+    <AgreementText>by selecting a photo you agree to our Terms of Service and Privacy Policy</AgreementText>
+  </HomeBody>
+  </>
 }
 
 // Styling for box-shadow
