@@ -48,8 +48,8 @@ const Album: React.FC<Props> = ({ history }) => {
         <Ionicons name="ios-menu" size={32} color={primary} />
       </MenuArea>
 
-      {imageList.map((album: any) => (
-        <AlbumWrap>
+      {imageList.map((album: any, key: number) => (
+        <AlbumWrap key={key}>
           <AlbumTitle>{album.titleName}</AlbumTitle>
 
           <AlbumBtn>
@@ -57,8 +57,8 @@ const Album: React.FC<Props> = ({ history }) => {
           </AlbumBtn>
 
           <AlbumPhotos>
-            {album.images.map((image: any) => (
-              <AlbumPhotoCardWrap onPress={() => {}}>
+            {album.images.map((image: any, imageKey: number) => (
+              <AlbumPhotoCardWrap key={imageKey}>
                 <AlbumPhotoCardImage source={image}>
                   <CustomCheckBox />
                 </AlbumPhotoCardImage>
