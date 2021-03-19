@@ -4,6 +4,7 @@ import { calcRem } from '../../utils/mixins'
 
 export const AlbumBody = styled.View`
   width: 100%;
+  height: 100%;
 `
 
 export const MenuArea = styled.View`
@@ -52,13 +53,4 @@ export const AlbumPhotoCardImage = styled.ImageBackground`
   padding: ${calcRem(0.4)};
   align-items: flex-end;
   justify-content: flex-end;
-`
-
-export const AlbumPhotoCardCheckBox = styled.View`
-  width: 20px;
-  height: 20px;
-  border-radius: 100px;
-  border: 1px solid white;
-  background: black;
-  opacity: 0.4;
 `

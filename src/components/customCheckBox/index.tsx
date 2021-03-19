@@ -1,13 +1,10 @@
 import React from 'react'
 import { CheckBoxWrap } from '../../styles/global'
 
-interface Props {
-  isCheck: boolean
-}
 
-const CustomCheckBox: React.FC<Props> = ({isCheck}) => {
+const CustomCheckBox: React.FC = () => {
 
-  return <CheckBoxWrap isCheck={isCheck} />
+  return <CheckBoxWrap />
 }
 
 export default CustomCheckBox
